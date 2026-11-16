@@ -17,3 +17,9 @@ This project helps students manage their academic notes.
 
 ## Project Status
 CampusNotes initial version is successfully uploaded to GitHub.
+
+## Contribution Guidelines
+
+- Use clear and meaningful commit messages.
+- Follow Conventional Commits format.
+- Keep documentation updated.
