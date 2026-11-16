@@ -1,6 +1,7 @@
+
 function addNote() {
-    const title = document.getElementById("title").value;
-    const content = document.getElementById("content").value;
+    const title = document.getElementById("title").value.trim();
+    const content = document.getElementById("content").value.trim();
 
     if (title === "" || content === "") {
         alert("Please enter title and notes!");
@@ -18,8 +19,12 @@ function addNote() {
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-btn";
+
     deleteButton.onclick = function() {
-        note.remove();
+        if (confirm("Are you sure you want to delete this note?")) {
+            note.remove();
+        }
     };
 
     note.appendChild(heading);
@@ -31,3 +36,4 @@ function addNote() {
     document.getElementById("title").value = "";
     document.getElementById("content").value = "";
 }
+
